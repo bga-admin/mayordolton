@@ -69,6 +69,14 @@
 
 img{
   width: 100%;
+  border-radius: 10px;
+}
+
+div, a{
+  border-radius: 10px;
+}
+a{
+  background-color: black;
 }
 
 #lightboxOverlay{

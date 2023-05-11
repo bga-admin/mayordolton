@@ -35,7 +35,7 @@ function App() {
 
 
   <Masonry
-  breakpointCols={8}
+  breakpointCols={7}
   className="my-masonry-grid"
   columnClassName="my-masonry-grid_column">
   {/* array of JSX items */}
