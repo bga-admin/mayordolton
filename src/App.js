@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Masonry from 'react-masonry-css';
 import img from './images/1.jpeg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import React, { useState, useEffect } from 'react';
 
 
@@ -40,7 +42,7 @@ function App() {
   columnClassName="my-masonry-grid_column">
   {/* array of JSX items */}
   {images.map((image, index) => (
-          <div><a data-lightbox="gallery" href={image} ><img key={index} src={image} alt={`Image ${index + 1}`} /></a></div>
+          <div><a data-lightbox="gallery" href={image} ><LazyLoadImage     effect="blur"          key={index} src={image} alt={`Image ${index + 1}`} /></a></div>
         ))}
 </Masonry>
 
