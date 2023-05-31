@@ -50,7 +50,6 @@
 
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-  background: grey;
   margin-bottom: 10px;
 }
 
@@ -69,16 +68,75 @@
 
 img{
   width: 100%;
-  border-radius: 10px;
 }
 
 div, a{
-  border-radius: 10px;
 }
 a{
-  background-color: black;
 }
 
 #lightboxOverlay{
   width: 100% !important;
+}
+
+h1{
+  color: antiquewhite;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+img{
+  cursor: -moz-zoom-in; 
+  cursor: -webkit-zoom-in; 
+  cursor: zoom-in;
+}
+
+html {
+  --scrollbarBG: #e8e8e8;
+  --thumbBG: #636363;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.my-masonry-grid_column > div{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

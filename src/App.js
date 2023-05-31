@@ -9,6 +9,8 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(false);
+
 
   
   useEffect(() => {
@@ -34,18 +36,27 @@ function App() {
   
   return (
     <div className="App">
-
-
+    {
+      images==false ? (
+       <div className='loader-container'> 
+          <div className='spinner'></div>
+       </div>
+      )
+      :
+   
+(
   <Masonry
-  breakpointCols={7}
+  breakpointCols={3}
   className="my-masonry-grid"
   columnClassName="my-masonry-grid_column">
   {/* array of JSX items */}
   {images.map((image, index) => (
           <div><a data-lightbox="gallery" href={image} ><LazyLoadImage     effect="blur"          key={index} src={image} alt={`Image ${index + 1}`} /></a></div>
         ))}
-</Masonry>
+</Masonry>)
+ }
 
+ 
     </div>
   );
 }
