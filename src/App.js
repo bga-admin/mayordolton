@@ -29,9 +29,10 @@ function App() {
 
   const breakpointColumnsObj = {
     default: 4,
-    1100: 3,
-    700: 2,
-    500: 1
+    700: 3,
+    450: 2,
+    300: 1,
+
   };
   
   return (
@@ -46,7 +47,7 @@ function App() {
    
 (
   <Masonry
-  breakpointCols={3}
+  breakpointCols={breakpointColumnsObj}
   className="my-masonry-grid"
   columnClassName="my-masonry-grid_column">
   {/* array of JSX items */}
